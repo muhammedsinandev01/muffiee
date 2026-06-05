@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Muffiee ❤️ | A Digital Love Letter</title>
+    <meta name="description" content="A little corner of the internet made only for you, Muffiee. With love, Sinan.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader-heart-wrap">
+            <div class="loader-heart">❤️</div>
+            <p class="loader-text">Preparing something special for you...</p>
+        </div>
+    </div>
+
+    <!-- Floating Hearts Canvas -->
+    <canvas id="hearts-canvas"></canvas>
+
+    <!-- Sparkle Particles -->
+    <div id="sparkle-container"></div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop autoplay>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Navigation -->
+    <nav class="nav" id="main-nav">
+        <div class="nav-brand">S ❤️ M</div>
+        <div class="nav-controls">
+            <button id="music-toggle" class="nav-btn" aria-label="Toggle music" title="Toggle Music">
+                <span class="icon-music-off">🔇</span>
+                <span class="icon-music-on" style="display:none">🎵</span>
+            </button>
+            <button id="theme-toggle" class="nav-btn" aria-label="Toggle theme" title="Toggle Theme">
+                <span class="icon-light">🌙</span>
+                <span class="icon-dark" style="display:none">☀️</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== SECTION 1: HERO ========== -->
+    <section id="hero" class="section hero-section">
+        <div class="hero-bg-shapes">
+            <div class="hero-circle hero-circle-1"></div>
+            <div class="hero-circle hero-circle-2"></div>
+            <div class="hero-circle hero-circle-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">Made with ❤️ for you</div>
+            <h1 class="hero-title">
+                To My <span class="highlight">Muffiee</span> <span class="hero-heart">❤️</span>
+            </h1>
+            <p class="hero-subtitle">A little corner of the internet made only for you.</p>
+            <button id="open-story-btn" class="btn-primary hero-btn">
+                <span class="btn-heart">💖</span>
+                Open Our Story
+                <span class="btn-heart">💖</span>
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 2: LOVE COUNTER ========== -->
+    <section id="love-counter" class="section counter-section">
+        <div class="section-container">
+            <h2 class="section-title">Our Love Story</h2>
+            <p class="section-subtitle">Every second with you is a blessing</p>
+            <div class="counter-grid" id="counter-grid">
+                <div class="counter-card">
+                    <div class="counter-value" id="counter-days">0</div>
+                    <div class="counter-label">Days</div>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-value" id="counter-hours">0</div>
+                    <div class="counter-label">Hours</div>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-value" id="counter-minutes">0</div>
+                    <div class="counter-label">Minutes</div>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-value" id="counter-seconds">0</div>
+                    <div class="counter-label">Seconds</div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-item" data-date="Dec 22, 2023">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>The Beginning 💕</h3>
+                        <p>The day our story began. December 22, 2023.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-date="Every Day">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Falling Deeper 🥰</h3>
+                        <p>Every day I fall more in love with you.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-date="Forever">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Together Forever 💍</h3>
+                        <p>And this is just the beginning of forever.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 3: WHY I LOVE YOU ========== -->
+    <section id="why-i-love-you" class="section love-section">
+        <div class="section-container">
+            <h2 class="section-title">Why I Love You</h2>
+            <p class="section-subtitle">There are a million reasons, here are just a few ✨</p>
+            <div class="love-cards-grid">
+                <div class="love-card" data-index="0">
+                    <div class="love-card-inner">
+                        <div class="love-card-front">
+                            <span class="love-card-emoji">💖</span>
+                            <span class="love-card-hint">Tap to reveal</span>
+                        </div>
+                        <div class="love-card-back">
+                            <p>Your smile lights up my entire world. Every time you laugh, my heart skips a beat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="love-card" data-index="1">
+                    <div class="love-card-inner">
+                        <div class="love-card-front">
+                            <span class="love-card-emoji">🦋</span>
+                            <span class="love-card-hint">Tap to reveal</span>
+                        </div>
+                        <div class="love-card-back">
+                            <p>You give me butterflies every single day, even now. That feeling never faded.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="love-card" data-index="2">
+                    <div class="love-card-inner">
+                        <div class="love-card-front">
+                            <span class="love-card-emoji">🌙</span>
+                            <span class="love-card-hint">Tap to reveal</span>
+                        </div>
+                        <div class="love-card-back">
+                            <p>You're my last thought before sleep and my first thought when I wake up.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="love-card" data-index="3">
+                    <div class="love-card-inner">
+                        <div class="love-card-front">
+                            <span class="love-card-emoji">🏠</span>
+                            <span class="love-card-hint">Tap to reveal</span>
+                        </div>
+                        <div class="love-card-back">
+                            <p>With you, anywhere feels like home. You are my safe place in this chaotic world.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="love-card" data-index="4">
+                    <div class="love-card-inner">
+                        <div class="love-card-front">
+                            <span class="love-card-emoji">✨</span>
+                            <span class="love-card-hint">Tap to reveal</span>
+                        </div>
+                        <div class="love-card-back">
+                            <p>You make me want to be a better person every day. You inspire me just by being you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="love-card" data-index="5">
+                    <div class="love-card-inner">
+                        <div class="love-card-front">
+                            <span class="love-card-emoji">🌹</span>
+                            <span class="love-card-hint">Tap to reveal</span>
+                        </div>
+                        <div class="love-card-back">
+                            <p>Your kindness, your warmth, your beauty — inside and out — make you the most amazing person I've ever known.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 4: MEMORY GALLERY ========== -->
+    <section id="memories" class="section memories-section">
+        <div class="section-container">
+            <h2 class="section-title">Our Memories</h2>
+            <p class="section-subtitle">A little scrapbook of us 📸</p>
+            <div class="gallery-grid">
+                <div class="polaroid" data-aos="fade-up">
+                    <div class="polaroid-img-wrap">
+                        <img src="images/couple_1.jpg" alt="Our Moment" loading="lazy">
+                    </div>
+                    <div class="polaroid-caption">
+                        <span class="caption-text">Our favorite moments together ❤️</span>
+                        <span class="sticker sticker-1">💕</span>
+                    </div>
+                </div>
+                <div class="polaroid" data-aos="fade-up">
+                    <div class="polaroid-img-wrap">
+                        <img src="images/couple_2.jpg" alt="Our Moment" loading="lazy">
+                    </div>
+                    <div class="polaroid-caption">
+                        <span class="caption-text">Every day is an adventure with you ✨</span>
+                        <span class="sticker sticker-2">🥰</span>
+                    </div>
+                </div>
+                <div class="polaroid" data-aos="fade-up">
+                    <div class="polaroid-img-wrap">
+                        <img src="images/couple_3.jpg" alt="Our Moment" loading="lazy">
+                    </div>
+                    <div class="polaroid-caption">
+                        <span class="caption-text">My happiest place is by your side 🥰</span>
+                        <span class="sticker sticker-3">💗</span>
+                    </div>
+                </div>
+                <div class="polaroid" data-aos="fade-up">
+                    <div class="polaroid-img-wrap">
+                        <img src="images/couple_4.jpg" alt="Our Moment" loading="lazy">
+                    </div>
+                    <div class="polaroid-caption">
+                        <span class="caption-text">Making memories that last forever 📸</span>
+                        <span class="sticker sticker-1">💞</span>
+                    </div>
+                </div>
+                <div class="polaroid" data-aos="fade-up">
+                    <div class="polaroid-img-wrap">
+                        <img src="images/couple_5.jpg" alt="Our Moment" loading="lazy">
+                    </div>
+                    <div class="polaroid-caption">
+                        <span class="caption-text">You, me, and a lifetime of love 💍</span>
+                        <span class="sticker sticker-2">✨</span>
+                    </div>
+                </div>
+                <div class="polaroid" data-aos="fade-up">
+                    <div class="polaroid-img-wrap">
+                        <img src="images/couple_6.jpg" alt="Our Moment" loading="lazy">
+                    </div>
+                    <div class="polaroid-caption">
+                        <span class="caption-text">Smiling because of you 💖</span>
+                        <span class="sticker sticker-3">💐</span>
+                    </div>
+                </div>
+                <div class="polaroid" data-aos="fade-up">
+                    <div class="polaroid-img-wrap">
+                        <img src="images/couple_7.jpg" alt="Our Moment" loading="lazy">
+                    </div>
+                    <div class="polaroid-caption">
+                        <span class="caption-text">The best part of my day is you 🌹</span>
+                        <span class="sticker sticker-1">💕</span>
+                    </div>
+                </div>
+                <div class="polaroid" data-aos="fade-up">
+                    <div class="polaroid-img-wrap">
+                        <img src="images/couple_8.jpg" alt="Our Moment" loading="lazy">
+                    </div>
+                    <div class="polaroid-caption">
+                        <span class="caption-text">Forever and always yours 💕</span>
+                        <span class="sticker sticker-2">🥰</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 5: LOVE LETTER ========== -->
+    <section id="love-letter" class="section letter-section">
+        <div class="section-container">
+            <h2 class="section-title">A Letter For You</h2>
+            <p class="section-subtitle">Click the envelope to read my heart 💌</p>
+            <div class="envelope-wrapper" id="envelope-wrapper">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body">
+                        <div class="envelope-front">
+                            <span class="envelope-label">To: My Muffiee ❤️</span>
+                            <span class="envelope-seal">💋</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="letter" id="letter">
+                    <div class="letter-content">
+                        <p class="letter-greeting">My Dearest Muffiee,</p>
+                        <p>I don't know where to begin, because words will never be enough to describe what you mean to me.</p>
+                        <p>From the moment you came into my life, everything changed. You turned ordinary days into adventures, quiet moments into memories, and a simple boy into someone who believes in magic — because you are magic.</p>
+                        <p>You are the calm in my chaos, the warmth in my winters, and the reason I smile for no reason at all. Every day with you feels like a gift I don't deserve but am endlessly grateful for.</p>
+                        <p>Thank you for being you. Thank you for loving me the way you do. Thank you for every laugh, every hug, every "good morning" text, and every late-night conversation.</p>
+                        <p>I promise to love you louder, hold you tighter, and never let a single day pass without making you feel how special you truly are.</p>
+                        <p>You are my forever, Muffiee.</p>
+                        <p class="letter-signature">With all my love,<br><span class="signature-name">Sinan</span> 💕</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 6: OUR FUTURE ========== -->
+    <section id="our-future" class="section future-section">
+        <div class="section-container">
+            <h2 class="section-title">Our Future Together</h2>
+            <p class="section-subtitle">Dreams we'll make come true, one day at a time 🌠</p>
+            <div class="constellation-bg" id="constellation-canvas"></div>
+            <div class="dream-board">
+                <div class="dream-card">
+                    <div class="dream-icon">✈️</div>
+                    <h3>Travel the World</h3>
+                    <p>Paris, Tokyo, Maldives... every corner of the world, hand in hand.</p>
+                </div>
+                <div class="dream-card">
+                    <div class="dream-icon">🏡</div>
+                    <h3>Our Dream Home</h3>
+                    <p>A cozy home filled with love, laughter, and warm afternoons together.</p>
+                </div>
+                <div class="dream-card">
+                    <div class="dream-icon">🐶</div>
+                    <h3>Fur Babies</h3>
+                    <p>Adopting the cutest puppies and kittens to complete our little family.</p>
+                </div>
+                <div class="dream-card">
+                    <div class="dream-icon">🌟</div>
+                    <h3>Chase Our Dreams</h3>
+                    <p>Supporting each other's goals and celebrating every victory, big or small.</p>
+                </div>
+                <div class="dream-card">
+                    <div class="dream-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Build a Family</h3>
+                    <p>A beautiful family built on love, trust, and endless adventure.</p>
+                </div>
+                <div class="dream-card">
+                    <div class="dream-icon">💫</div>
+                    <h3>Grow Old Together</h3>
+                    <p>Side by side through every season of life, still holding hands at 80.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 7: FINAL SURPRISE ========== -->
+    <section id="final-surprise" class="section surprise-section">
+        <div class="surprise-bg-image" id="surprise-bg-image"></div>
+        <div class="section-container">
+            <div class="surprise-content">
+                <div class="giant-heart" id="giant-heart">
+                    <span class="giant-heart-emoji">❤️</span>
+                </div>
+                <h2 class="surprise-title">You Are My Everything</h2>
+                <p class="surprise-message">
+                    No matter where life takes us, you will always have a special place in my heart. ❤️
+                </p>
+                <p class="surprise-sub">Forever and always yours,</p>
+                <p class="surprise-signature">Sinan 💕</p>
+                <button id="confetti-btn" class="btn-primary surprise-btn">
+                    🎉 Click for a surprise! 🎉
+                </button>
+            </div>
+        </div>
+        <canvas id="confetti-canvas"></canvas>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with 💖 by Sinan for his Kunji</p>
+        <p class="footer-date">Since December 22, 2023 — Forever</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
